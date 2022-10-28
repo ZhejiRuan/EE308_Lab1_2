@@ -68,7 +68,7 @@ public class Lab1_2 {
 	        }
 	        System.out.println("total num: " + totalNum);
 	    }
-
+	    
 	    public static void findSwitchAndCase(String s) {
 	        Pattern p1 = Pattern.compile("switch");
 	        String[] switchs = p1.split(s);
@@ -88,40 +88,40 @@ public class Lab1_2 {
 
 	public static void processElse(String code,int level) {
 		int ifelNum = 0;
-        int esifNum = 0;
-        boolean lock = true;
-        Stack stack = new Stack();
-        Pattern pattern = Pattern.compile("else if|if|else");
-        Matcher matcher = pattern.matcher(code);
-        while (matcher.find()) {
-            String temp = matcher.group();
-            if ("if".equals(temp)) {
-                stack.push(temp);
-            } else if ("else if".equals(temp)) {
-                stack.push(temp);
-            } else if ("else".equals(temp)) {
-                if ("if".equals(stack.peek())) {
-                    stack.pop();
-                    ifelNum++;
-                } else {
-                    while (!"if".equals(stack.peek())) {
-                        stack.pop();
-                        if (lock == true) {
-                            esifNum++;
-                            lock = false;
-                        }
-                    }
-                    stack.pop();
-                    lock = true;
-                }
-            }
-        }
-        if (level == 3) {
-        	System.out.println("if-else num: " + ifelNum);
-        } else if (level == 4) {
-        	System.out.println("if-else num: " + ifelNum);
-            System.out.println("if-elseif-else: " + esifNum);
-        } else {
-        }
-    }
+        	int esifNum = 0;
+        	boolean lock = true;
+        	Stack stack = new Stack();
+        	Pattern pattern = Pattern.compile("else if|if|else");
+        	Matcher matcher = pattern.matcher(code);
+        	while (matcher.find()) {
+            		String temp = matcher.group();
+            		if ("if".equals(temp)) {
+                		stack.push(temp);
+            		} else if ("else if".equals(temp)) {
+                		stack.push(temp);
+            		} else if ("else".equals(temp)) {
+                		if ("if".equals(stack.peek())) {
+                	    	stack.pop();
+                	    	ifelNum++;
+                		} else {
+                	   		while (!"if".equals(stack.peek())) {
+                        			stack.pop();
+                        			if (lock == true) {
+                        	    		esifNum++;
+                        	    		lock = false;
+                        			}
+                    			}
+                    			stack.pop();
+                    			lock = true;
+                		}
+            		}	
+        	}
+        	if (level == 3) {
+        		System.out.println("if-else num: " + ifelNum);
+        	} else if (level == 4) {
+        		System.out.println("if-else num: " + ifelNum);
+            		System.out.println("if-elseif-else: " + esifNum);
+        	} else {
+        	}
+    	}
 }
