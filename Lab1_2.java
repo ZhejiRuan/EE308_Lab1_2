@@ -51,7 +51,7 @@ public class Lab1_2 {
 	             break;
 	     }
 	  }
-
+	  //level 1
 	  public static void findKey(String s) {
 	        String keywords = "char,short,int,long,signed,unsigned,float,double,struct,union,enum,void,"
 	                + "for,do,while,break,continue,if,else,goto,switch,case,default,return,"
