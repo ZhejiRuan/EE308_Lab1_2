@@ -51,6 +51,7 @@ public class Lab1_2 {
 	             break;
 	     }
 	  }
+	
 	  //level 1
 	  public static void findKey(String s) {
 	        String keywords = "char,short,int,long,signed,unsigned,float,double,struct,union,enum,void,"
@@ -68,7 +69,8 @@ public class Lab1_2 {
 	        }
 	        System.out.println("total num: " + totalNum);
 	    }
-	    
+	
+	    //level 2
 	    public static void findSwitchAndCase(String s) {
 	        Pattern p1 = Pattern.compile("switch");
 	        String[] switchs = p1.split(s);
