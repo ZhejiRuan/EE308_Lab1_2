@@ -11,13 +11,11 @@ import java.util.regex.Pattern;
 public class Lab1_2 {
 	public static void main(String[] args) throws IOException {
 
-		Scanner scanner = new Scanner(System.in);
-
+	    Scanner scanner = new Scanner(System.in);
 	    //Read C file from file address
 	    System.out.println("Please input the path of the code file");
 	    //String fileName = "D:\\Lab\\lab1_2\\sample.c";
 	    String fileName = scanner.nextLine();
-
 	    //Read the file
 	    BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
 	    String Cfilepath = "";
