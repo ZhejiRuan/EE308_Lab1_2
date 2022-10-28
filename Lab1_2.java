@@ -15,7 +15,7 @@ public class Lab1_2 {
 
 	    //Read C file from file address
 	    System.out.println("Please input the path of the code file");
-	    //String fileName = "D:\\Code\\software_engineering_lab1\\src\\sample.c";
+	    //String fileName = "D:\\Lab\\lab1_2\\sample.c";
 	    String fileName = scanner.nextLine();
 
 	  //Read the file
