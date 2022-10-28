@@ -18,7 +18,7 @@ public class Lab1_2 {
 	    //String fileName = "D:\\Lab\\lab1_2\\sample.c";
 	    String fileName = scanner.nextLine();
 
-	  //Read the file
+	    //Read the file
 	    BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
 	    String Cfilepath = "";
 	    String line = bufferedReader.readLine();
@@ -86,7 +86,7 @@ public class Lab1_2 {
 	    }
 
 
-	public static void processElse(String code,int level) {
+	   public static void processElse(String code,int level) {
 		int ifelNum = 0;
         	int esifNum = 0;
         	boolean lock = true;
